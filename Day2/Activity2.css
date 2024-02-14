@@ -1,0 +1,156 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+    /* PHONE */
+    @media (max-width: 767px) {
+
+        #wrapper{
+            width: 100%;
+            background-color: #FFD9B7;
+            margin: 0px auto;
+            padding-bottom: 5px;
+          
+            
+        }
+        #logo{
+            min-height: 80px;
+            width: 100%;
+            background-color: hsl(21, 41%, 53%);
+            display:inline-block;
+           
+        }
+
+        #navigation{
+            min-height: 80px;
+            width: 100%;
+            background-color: #FF7F27;
+            display:inline-block;
+            margin-top:-4px;
+        }
+
+        #main_content{
+            margin-top:-4px;
+            min-height: 150px;
+            background-color: #880015;
+            padding:25px;
+            
+        }
+
+        
+        #about{
+            min-height: 150px;
+            width: 100%;
+            background-color: #FFAEC9;
+        }
+
+        .sponsors{
+            margin-top:10px;
+            height:50px;
+            width: 100%;
+            background-color:yellow;
+            display: inline-block;
+        }
+        
+
+    }
+
+  /* TABLET */
+  @media (min-width: 768px) and (max-width: 991px) 
+  {
+    #wrapper{
+    
+        background-color: #FFD9B7;
+        margin: 0px auto;
+        padding:0px 0px 0px 0px;
+        padding-bottom:10px;
+    }
+
+    #logo{
+        min-height: 130px;
+        width: 30%;
+        background-color: hsl(21, 41%, 53%);
+        margin-bottom: 20px;
+        display:inline-block;
+        margin-right:10px;
+    }
+
+    #navigation{
+        min-height: 130px;
+        width:68%;
+        background-color: #FF7F27;
+        display:inline-block;
+        margin-bottom: 20px;
+        
+    }
+
+    #main_content{
+        min-height: 250px;
+        background-color: #880015;
+        padding:25px;
+    }
+
+    #about{
+        min-height: 250px;
+        width: 100%;
+        background-color: #FFAEC9;
+    }
+    .sponsors{
+        margin-top:10px;
+        height:50px;
+        width: 49.5%;
+        background-color:yellow;
+        display: inline-block;
+    }
+  }
+  
+  /* Laptop */
+  @media (min-width: 992px)  
+  {
+    #wrapper{
+        width: 940px;
+        background-color: #FFD9B7;
+        margin: 0px auto;
+        padding:20px;
+      
+        
+    }
+    #logo{
+        min-height: 130px;
+        width: 30%;
+        background-color: hsl(21, 41%, 53%);
+        margin-bottom: 20px;
+        display:inline-block;
+    }
+    #navigation{
+        min-height: 130px;
+        width:69.5%;
+        background-color: #FF7F27;
+        display:inline-block;
+        margin-bottom: 20px;
+    }
+    #main_content{
+        min-height: 250px;
+        width: 887px;
+        background-color: #880015;
+        padding:25px;
+    }
+
+    #about{
+        min-height: 250px;
+        width: 100%;
+        background-color: #FFAEC9;
+    }
+    .sponsors{
+        margin-top:10px;
+        height:50px;
+        width: 310px;
+        background-color:yellow;
+        display: inline-block;
+    }
+  }
+
+
+
