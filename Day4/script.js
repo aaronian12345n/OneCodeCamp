@@ -25,7 +25,7 @@ for (let i = startNumber; i <= endNumber; i++) {
 //End of Printing Numbers in a Range
 
 //Guess the Secret Number Game
-let secretNumber = Math.floor(Math.random() * 10) + 1;
+let secretNumber = Math.floor(Math.random() * 10) + 1; //  
 let attempts = 0;
 let guessedNumber;
 
