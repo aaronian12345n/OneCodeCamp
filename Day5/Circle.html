@@ -4,7 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Random Circle Generator</title>
-<style>
+
+<!-- CSS styling for the page -->
+<style>   
     body, html {
         margin: 0;
         padding: 0;
@@ -57,25 +59,35 @@
 </head>
 <body>
 
-<div id="colorPalettes">
+<!-- Color Pallets -->
+
+<div id="colorPalettes"> 
     <div class="colorPalette" id="blue"></div>
     <div class="colorPalette" id="pink"></div>
     <div class="colorPalette" id="red"></div>
     <div class="colorPalette" id="yellow"></div>
 </div>
+
+<!-- Canvas -->
 <canvas id="myCanvas"></canvas>
+
+
+<!-- Reset Button -->
 <button id="resetButton">Reset</button>
 
+<!-- Script -->
 <script>
-    const canvas = document.getElementById('myCanvas');
-    const ctx = canvas.getContext('2d');
-    const colorPalettes = document.querySelectorAll('.colorPalette');
-    const resetButton = document.getElementById('resetButton');
-    let circles = [];
+    const canvas = document.getElementById('myCanvas'); // Get Element
+    const ctx = canvas.getContext('2d'); // Get Context
+    const colorPalettes = document.querySelectorAll('.colorPalette'); // Get Color palettes
+    const resetButton = document.getElementById('resetButton'); // Get reset Button
+    let circles = []; // Initialize Circle Array
 
+    // Set the canvas size
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
+    // Event listeners for color palettes
     colorPalettes.forEach(palette => {
         palette.addEventListener('click', function(event) {
             // Prevent the click event from bubbling up to the window
@@ -92,6 +104,7 @@
         });
     });
 
+    // Event listeners for reset button
     resetButton.addEventListener('click', function() {
         // Clear the canvas
         ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -103,6 +116,7 @@
         circles = [];
     });
 
+    // Function for palette selection
     function drawOutline(selectedPalette) {
         const x = parseInt(selectedPalette.style.left) - 5; 
         const y = parseInt(selectedPalette.style.top) - 5; 
@@ -114,38 +128,39 @@
         ctx.lineWidth = 2;
         ctx.stroke();
     }
-
+    // Draw the Circle 
     function drawCircles() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear 
         
         for (let i = 0; i < circles.length; i++) {
             const circle = circles[i];
-            circle.radius -= 0.5;
+            circle.radius -= 0.5; // Decrease Radius
             
-            if (circle.radius > 0) {
+            if (circle.radius > 0) { // if Radius is Positive
                 ctx.beginPath();
                 ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
                 ctx.fillStyle = circle.color;
                 ctx.fill();
             } else {
-                circles.splice(i, 1); 
+                circles.splice(i, 1); // Removes the Cicle if radius reaches zero
                 i--; 
             }
         }
     }
 
+    // Event listener for window click
     window.addEventListener('click', function(event) {
-        const selectedPalette = document.querySelector('.colorPalette.selected');
-        if (selectedPalette) {
+        const selectedPalette = document.querySelector('.colorPalette.selected'); // Get Selected Palettes
+        if (selectedPalette) {  // If palettes was selected
             const x = event.clientX;
             const y = event.clientY;
-            const radius = Math.random() * 50 + 10; 
-            const color = selectedPalette.id;
-            circles.push({ x, y, radius, color });
+            const radius = Math.random() * 50 + 10;  // Random radius
+            const color = selectedPalette.id; // Get color from selected palettes
+            circles.push({ x, y, radius, color }); // Add to array
         }
     });
 
-    setInterval(drawCircles, 100); 
+    setInterval(drawCircles, 100); // Draw cicle intervals
 </script>
 
 </body>

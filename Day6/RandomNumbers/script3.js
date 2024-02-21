@@ -1,5 +1,5 @@
-async function EmitRandomNumberAsync() {
-    let attempts = 1;
+async function EmitRandomNumberAsync() { 
+    let attempts = 1; 
 
     while (attempts <= 10) {
         await new Promise(resolve => setTimeout(resolve, 2000));
