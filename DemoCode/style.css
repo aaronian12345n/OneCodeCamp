@@ -1,0 +1,14 @@
+/* CSS */
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: coral;
+    margin: 20px;
+    text-align: center;
+    line-height: 100px;
+    cursor: pointer;
+}
+
+#paragraph{
+    cursor: pointer;
+}
