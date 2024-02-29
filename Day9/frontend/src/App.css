@@ -36,3 +36,64 @@
     transform: rotate(360deg);
   }
 }
+
+.todo-wrapper{
+  text-align: left;
+}
+
+/* styles.css */
+
+/* Navbar */
+.navbar {
+  padding: 0.5rem 1rem;
+}
+.navbar-brand {
+  color: #fff;
+  font-size: 1.25rem;
+}
+.nav-link {
+  color: #fff;
+  margin: 0 1rem;
+}
+.nav-link:hover {
+  color: #ccc;
+}
+/* End of Navbar */
+
+/* About me Section */
+#landing-section {
+  padding: 2rem 0;
+}
+.list-group-item {
+  background-color: transparent;
+  border-color: #ddd;
+  color: #000;
+}
+.border {
+  border: 1px solid #000;
+}
+/* End of About me Section */
+
+/* Tools Section */
+#tools-section {
+  padding: 2rem 0;
+}
+/* End of Tools Section */
+
+/* Contact Section */
+#contact-section {
+  padding: 2rem 0;
+}
+.map-container {
+  margin-top: 2rem;
+}
+/* End of Contact Section */
+
+/* Footer */
+.footer {
+  padding: 1rem 0;
+  background-color: #000;
+  color: #fff;
+}
+/* End of Footer */
+
